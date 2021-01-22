@@ -1,11 +1,14 @@
 # [DevExtream REACTIVE React Scheduler](https://devexpress.github.io/devextreme-reactive/react/scheduler/)のテスト使用
 
-## セットアップ内容
+## 動かし方
 
 ```shell
 $ npm install -g yarn
-$ create-react-app ./
+$ yarn
+$ yarn start
 ```
+
+## インストールしたパッケージ
 
 ```shell
 $ yarn add @devexpress/dx-react-core @devexpress/dx-react-scheduler @devexpress/dx-react-scheduler-material-ui @material-ui/core @material-ui/icons clsx
