@@ -1,4 +1,4 @@
-# [DevEXtream REACTIVE React Scheduler](https://devexpress.github.io/devextreme-reactive/react/scheduler/)のテスト使用
+# [DevExtream REACTIVE React Scheduler](https://devexpress.github.io/devextreme-reactive/react/scheduler/)のテスト使用
 
 ## セットアップ内容
 
