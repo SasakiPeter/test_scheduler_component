@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# [DevEXtream REACTIVE React Scheduler](https://devexpress.github.io/devextreme-reactive/react/scheduler/)のテスト使用
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## セットアップ内容
 
-## Available Scripts
+```shell
+$ npm install -g yarn
+$ create-react-app ./
+```
 
-In the project directory, you can run:
+```shell
+$ yarn add @devexpress/dx-react-core @devexpress/dx-react-scheduler @devexpress/dx-react-scheduler-material-ui @material-ui/core @material-ui/icons clsx
+```
 
-### `yarn start`
+## Issue
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- 背景に色を付けて、草生やすみたいにしたい
+  - TimeTableComponent を自作するとき、以下の問題に注意
+  - ダブルクリックした時、ちゃんと追加のモーダルが起動するか
+  - 今日の日付がわかるようになっているか
+    - [CurrentTimeIndicator](https://devexpress.github.io/devextreme-reactive/react/scheduler/docs/guides/current-time-indication/)か、TableCell の問題か？
+    - デバッグに[TodayButton](https://devexpress.github.io/devextreme-reactive/react/scheduler/docs/guides/date-navigation/)使うといいかも
+- アポクリック時のモーダルをカスタマイズ
+  - [AppointmentTooltip](https://devexpress.github.io/devextreme-reactive/react/scheduler/docs/guides/appointment-tooltip/#customize-the-appearance)
+- アポ編集画面のカスタマイズ
+  - よく使うものとかは、選べるようにする
+  - [Customize the Appointment Form](https://devexpress.github.io/devextreme-reactive/react/scheduler/docs/guides/editing/#customize-the-appointment-form)
+- 削除する時の確認ダイアログをカスタマイズ
+- zero duration appointment が monthview では表示されない
+  - [zero duration](https://devexpress.github.io/devextreme-reactive/react/scheduler/docs/guides/appointments/#zero-duration-appointments)
+  - weekview とかなら表示できる
+- [locale](https://devexpress.github.io/devextreme-reactive/react/scheduler/docs/reference/scheduler/)をいい感じにしたい
+  - ja-JP 悪くないんだけど、日にちにいちいち'日'ってつけるの鬱陶しい
+- 追加する時にシングルクリックでいいようにしたい
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 各種リファレンス
 
-### `yarn test`
+### アポ編集画面
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+アポをクリックした時のモーダルのカスタマイズ
 
-### `yarn build`
+[AppointmentTooltip](https://devexpress.github.io/devextreme-reactive/react/scheduler/docs/guides/appointment-tooltip/#customize-the-appearance)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### アポフォーム編集
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+アポ編集画面のカスタマイズ
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Customize the Appointment Form](https://devexpress.github.io/devextreme-reactive/react/scheduler/docs/guides/editing/#customize-the-appointment-form)
